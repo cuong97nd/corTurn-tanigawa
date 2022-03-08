@@ -1,0 +1,9 @@
+version: '3'
+services:
+  homeassistant:
+    image: "instrumentisto/coturn"
+    volumes:
+      - "./my.conf:/etc/coturn/turnserver.conf"
+    network_mode: "host"
+    restart: unless-stopped
+    privileged: true
